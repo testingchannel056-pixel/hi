@@ -1,0 +1,97 @@
+[gd_scene format=3]
+
+[ext_resource type="FontFile" uid="uid://cy4oq2v7orodx" path="res://EBGaramond-VariableFont_wght.ttf" id="1_font"]
+[ext_resource type="Script" path="res://scripts/character_customization.gd" id="2_custom"]
+[ext_resource type="Script" path="res://scripts/character_visual.gd" id="3_visual"]
+[ext_resource type="Texture2D" path="res://assets/character/skin/light.svg" id="4_skin"]
+[ext_resource type="Texture2D" path="res://assets/character/eyes/brown.svg" id="5_eyes"]
+[ext_resource type="Texture2D" path="res://assets/character/hair/black.svg" id="6_hair"]
+
+[sub_resource type="Theme" id="Theme_custom"]
+default_font = ExtResource("1_font")
+default_font_size = 22
+Label/colors/font_color = Color(0.91, 0.863, 0.753, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frame"]
+bg_color = Color(0.15, 0.19, 0.25, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72, 0.6, 0.37, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="CharacterCustomization" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_custom")
+script = ExtResource("2_custom")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.065, 0.09, 1)
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Title" type="Label" parent="Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Character Customization"
+horizontal_alignment = 1
+
+[node name="Frame" type="PanelContainer" parent="Layout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_frame")
+
+[node name="Stage" type="Control" parent="Layout/Frame"]
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+
+[node name="CharacterVisual" type="Node2D" parent="Layout/Frame/Stage"]
+position = Vector2(256, 256)
+script = ExtResource("3_visual")
+
+[node name="SkinSprite" type="Sprite2D" parent="Layout/Frame/Stage/CharacterVisual"]
+texture = ExtResource("4_skin")
+
+[node name="EyesSprite" type="Sprite2D" parent="Layout/Frame/Stage/CharacterVisual"]
+texture = ExtResource("5_eyes")
+
+[node name="HairSprite" type="Sprite2D" parent="Layout/Frame/Stage/CharacterVisual"]
+texture = ExtResource("6_hair")
+
+[node name="DataLabel" type="Label" parent="Layout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83, 0.69, 0.42, 1)
+text = "skin = \"light\"     eyes = \"brown\"     hair = \"black\""
+horizontal_alignment = 1
+
+[node name="Rows" type="VBoxContainer" parent="Layout"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 14

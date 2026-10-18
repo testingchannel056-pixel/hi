@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><defs><radialGradient id="enamel"><stop stop-color="#284754"/><stop offset="1" stop-color="#101b2f"/></radialGradient></defs><circle cx="14" cy="14" r="13" fill="url(#enamel)" stroke="#d3b777" stroke-width=".7"/><g transform="translate(3 3) scale(.7857)">
+<path d="M7 12 Q7 8 11 8 L20 8 Q23 8 23 11 L23 18 Q23 23 17 23 L11 23 Q7 23 7 18 Z" fill="#b93a32" stroke="#5e1612" stroke-width="2" stroke-linejoin="round"/>
+<path d="M11 8 L11 14 M15 8 L15 14 M19 8 L19 14" stroke="#5e1612" stroke-width="1.5" fill="none"/>
+<path d="M7 16 Q3 15 4 11 Q7 8 10 11" fill="#b93a32" stroke="#5e1612" stroke-width="2" stroke-linejoin="round"/>
+</g><path d="M7 4Q14 0 21 4" fill="none" stroke="#8de2dc" stroke-width=".7" opacity=".7"/></svg>

@@ -1,0 +1,78 @@
+[gd_scene format=3]
+
+[ext_resource type="FontFile" uid="uid://cy4oq2v7orodx" path="res://EBGaramond-VariableFont_wght.ttf" id="1_font"]
+[ext_resource type="Script" path="res://scripts/character_parts.gd" id="2_parts"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.96, 0.95, 0.93, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72, 0.6, 0.37, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_parts"]
+default_font = ExtResource("1_font")
+default_font_size = 22
+Label/colors/font_color = Color(0.16, 0.14, 0.12, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="CharacterParts" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_parts")
+script = ExtResource("2_parts")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.065, 0.09, 1)
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = -40.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Title" type="Label" parent="Layout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.863, 0.753, 1)
+theme_override_font_sizes/font_size = 36
+text = "Character Customization"
+horizontal_alignment = 1
+
+[node name="Grid" type="GridContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 2
+
+[node name="DataLabel" type="Label" parent="Layout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83, 0.69, 0.42, 1)
+horizontal_alignment = 1
+autowrap_mode = 3

@@ -1,0 +1,363 @@
+[gd_scene format=3 uid="uid://rc4b11jya4xg"]
+
+[ext_resource type="Script" uid="uid://2232gbxw3nnh" path="res://game.gd" id="1_ig7tw"]
+[ext_resource type="Script" path="res://ui_pack/portrait.gd" id="3_portrait"]
+[ext_resource type="Texture2D" uid="uid://b3onm320ppdsj" path="res://assets/ui/more.svg" id="9_more"]
+[ext_resource type="Texture2D" uid="uid://cye5g8gr1hkcu" path="res://assets/ui/menu.svg" id="10_menu"]
+[ext_resource type="Texture2D" uid="uid://to17kucsm1gm" path="res://assets/ui/settings.svg" id="11_settings"]
+[ext_resource type="Texture2D" uid="uid://behlguwswl3j5" path="res://assets/ui/profile.svg" id="12_profile"]
+[ext_resource type="PackedScene" path="res://new_life.tscn" id="13_new_life"]
+[ext_resource type="Script" uid="uid://dsclddgdjfah3" path="res://scripts/music.gd" id="15_music"]
+[ext_resource type="Texture2D" uid="uid://dcsx4ex0kkoxe" path="res://assets/ui/inventory.svg" id="16_inventory"]
+[ext_resource type="Script" uid="uid://cfnurqxpnxvld" path="res://scripts/battle_stage.gd" id="17_battle"]
+
+[sub_resource type="Gradient" id="Gradient_bg"]
+colors = PackedColorArray(0.09, 0.125, 0.15, 1, 0.035, 0.05, 0.065, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bg"]
+gradient = SubResource("Gradient_bg")
+fill_to = Vector2(0, 1)
+
+[node name="Control" type="Control" unique_id=1565007529]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1373467031]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_bg")
+expand_mode = 1
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=71924158]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 14
+
+[node name="VBox" type="VBoxContainer" parent="Margin" unique_id=553646783]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TopBar" type="HBoxContainer" parent="Margin/VBox" unique_id=560744313]
+layout_mode = 2
+
+[node name="MenuButton" type="Button" parent="Margin/VBox/TopBar" unique_id=1281020137]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"DockButton"
+icon = ExtResource("10_menu")
+
+[node name="GameTitle" type="Label" parent="Margin/VBox/TopBar" unique_id=1741944341]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"HintLabel"
+text = "Murim Life"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="SettingsButton" type="Button" parent="Margin/VBox/TopBar" unique_id=1960038716]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"DockButton"
+icon = ExtResource("11_settings")
+
+[node name="HeaderPanel" type="PanelContainer" parent="Margin/VBox"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Margin/VBox/HeaderPanel" unique_id=2068688990]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Portrait" type="TextureRect" parent="Margin/VBox/HeaderPanel/Header"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("3_portrait")
+
+[node name="Info" type="VBoxContainer" parent="Margin/VBox/HeaderPanel/Header" unique_id=2128983329]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="NameRow" type="HBoxContainer" parent="Margin/VBox/HeaderPanel/Header/Info" unique_id=1490602269]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="NameLabel" type="Label" parent="Margin/VBox/HeaderPanel/Header/Info/NameRow" unique_id=1130699664]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "Name"
+text_overrun_behavior = 3
+
+[node name="StageBadge" type="PanelContainer" parent="Margin/VBox/HeaderPanel/Header/Info/NameRow" unique_id=1547052762]
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"Badge"
+
+[node name="StageLabel" type="Label" parent="Margin/VBox/HeaderPanel/Header/Info/NameRow/StageBadge" unique_id=812282096]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"BadgeLabel"
+text = "Commoner"
+uppercase = true
+
+[node name="DateLabel" type="Label" parent="Margin/VBox/HeaderPanel/Header/Info" unique_id=1872723941]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+text = "Age 0  ·  Year 1200"
+
+[node name="HealthBar" type="ProgressBar" parent="Margin/VBox/HeaderPanel/Header/Info" unique_id=1333706076]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 2
+show_percentage = false
+
+[node name="Text" type="Label" parent="Margin/VBox/HeaderPanel/Header/Info/HealthBar" unique_id=21558521]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 17
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QiBar" type="ProgressBar" parent="Margin/VBox/HeaderPanel/Header/Info" unique_id=1813464483]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 2
+show_percentage = false
+
+[node name="Text" type="Label" parent="Margin/VBox/HeaderPanel/Header/Info/QiBar" unique_id=1873643183]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 17
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="GridContainer" parent="Margin/VBox" unique_id=1034177005]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 4
+
+[node name="Page" type="ScrollContainer" parent="Margin/VBox" unique_id=1733163254]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="PageBox" type="VBoxContainer" parent="Margin/VBox/Page" unique_id=1018394761]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+
+[node name="Illustration" type="TextureRect" parent="Margin/VBox/Page/PageBox" unique_id=562846119]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 310)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Battle" type="Control" parent="Margin/VBox/Page/PageBox/Illustration" unique_id=2066388045]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("17_battle")
+
+[node name="Bars" type="HBoxContainer" parent="Margin/VBox/Page/PageBox" unique_id=396641410]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="YourBar" type="ProgressBar" parent="Margin/VBox/Page/PageBox/Bars" unique_id=1952757345]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+show_percentage = false
+
+[node name="Text" type="Label" parent="Margin/VBox/Page/PageBox/Bars/YourBar" unique_id=1561767511]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyBar" type="ProgressBar" parent="Margin/VBox/Page/PageBox/Bars" unique_id=602005199]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+show_percentage = false
+
+[node name="Text" type="Label" parent="Margin/VBox/Page/PageBox/Bars/EnemyBar" unique_id=252850571]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Story" type="RichTextLabel" parent="Margin/VBox/Page/PageBox" unique_id=1420434680]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="Line" type="HSeparator" parent="Margin/VBox/Page/PageBox" unique_id=850563363]
+layout_mode = 2
+
+[node name="Choices" type="VBoxContainer" parent="Margin/VBox/Page/PageBox" unique_id=474139091]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Dock" type="PanelContainer" parent="Margin/VBox" unique_id=521584900]
+layout_mode = 2
+theme_type_variation = &"Dock"
+
+[node name="BottomBar" type="HBoxContainer" parent="Margin/VBox/Dock" unique_id=689471528]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="ProfileButton" type="Button" parent="Margin/VBox/Dock/BottomBar" unique_id=1390783094]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"DockButton"
+text = "Profile"
+icon = ExtResource("12_profile")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="AgeButton" type="Button" parent="Margin/VBox/Dock/BottomBar" unique_id=252387622]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 84)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+theme_type_variation = &"AgeButton"
+text = "+  Age"
+
+[node name="InventoryButton" type="Button" parent="Margin/VBox/Dock/BottomBar" unique_id=2084619289]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"DockButton"
+text = "Inventory"
+icon = ExtResource("16_inventory")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="MoreButton" type="Button" parent="Margin/VBox/Dock/BottomBar" unique_id=544529888]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"DockButton"
+text = "More"
+icon = ExtResource("9_more")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Popup" type="Control" parent="." unique_id=2079351517]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="Popup" unique_id=1132286078]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.65)
+
+[node name="Center" type="CenterContainer" parent="Popup" unique_id=1737415288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" type="PanelContainer" parent="Popup/Center" unique_id=1054903523]
+custom_minimum_size = Vector2(620, 0)
+layout_mode = 2
+theme_type_variation = &"PopupCard"
+
+[node name="VBox" type="VBoxContainer" parent="Popup/Center/Card" unique_id=1163262518]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="PopupTitle" type="Label" parent="Popup/Center/Card/VBox" unique_id=1568785099]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"TitleLabel"
+text = "Title"
+horizontal_alignment = 1
+
+[node name="PopupBody" type="VBoxContainer" parent="Popup/Center/Card/VBox" unique_id=1508111427]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PopupClose" type="Button" parent="Popup/Center/Card/VBox" unique_id=1393697452]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close"
+
+[node name="Creation" parent="." unique_id=1924460865 instance=ExtResource("13_new_life")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1400289380]
+unique_name_in_owner = true
+script = ExtResource("15_music")

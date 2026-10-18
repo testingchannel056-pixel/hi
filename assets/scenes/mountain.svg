@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="384" viewBox="0 0 160 96">
+<defs><clipPath id="frame"><rect x="1" y="1" width="158" height="94" rx="5"/></clipPath></defs>
+<g clip-path="url(#frame)">
+<rect width="160" height="96" fill="#dfe7e4"/>
+<circle cx="130" cy="17" r="7" fill="#f3d48a"/>
+<path d="M0 60 L28 26 L52 52 L80 14 L112 54 L134 32 L160 58 L160 96 L0 96 Z" fill="#9fb1b3"/>
+<path d="M80 14 L90 27 L84 25 L78 30 L72 24 Z" fill="#f4f6f3"/>
+<path d="M28 26 L34 34 L28 33 L23 35 Z" fill="#f4f6f3"/>
+<path d="M134 32 L140 39 L134 38 L129 40 Z" fill="#f4f6f3"/>
+<path d="M0 78 L36 50 L70 80 L104 46 L160 84 L160 96 L0 96 Z" fill="#62797a"/>
+<path d="M0 90 Q40 76 80 86 Q120 96 160 84 L160 96 L0 96 Z" fill="#46605a"/>
+<path d="M70 96 Q84 84 78 74 Q72 66 84 58" stroke="#c9b68c" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M22 88 L28 68 L34 88 Z" fill="#2c4a3a"/>
+<path d="M128 92 L135 70 L142 92 Z" fill="#2c4a3a"/>
+<path d="M112 94 L117 78 L122 94 Z" fill="#2c4a3a"/>
+<path d="M40 92 L45 76 L50 92 Z" fill="#2c4a3a"/>
+</g>
+<rect x="1" y="1" width="158" height="94" rx="5" fill="none" stroke="#c9a15a" stroke-width="1.2"/>
+</svg>

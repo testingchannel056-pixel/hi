@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<g transform="translate(256 215) scale(1.15) translate(-256 -215)" stroke-linejoin="round" stroke-linecap="round">
+<path d="M 222 286 L 222 366 C 218 386 188 398 150 408 C 106 420 80 442 72 484 L 68 530 L 444 530 L 440 484 C 432 442 406 420 362 408 C 324 398 294 386 290 366 L 290 286 Z" fill="#94603f" stroke="#33190e" stroke-width="5"/>
+<path d="M 225 300 L 287 300 L 287 346 C 276 372 236 372 225 346 Z" fill="#74452b"/>
+<path d="M 238 420 C 216 427 192 427 170 421" fill="none" stroke="#74452b" stroke-width="4"/>
+<path d="M 274 420 C 296 427 320 427 342 421" fill="none" stroke="#74452b" stroke-width="4"/>
+
+<path d="M 178 204 C 158 194 146 214 152 238 C 156 254 168 264 180 256 Z" fill="#94603f" stroke="#33190e" stroke-width="5"/>
+<path d="M 170 218 C 161 222 161 238 169 246" fill="none" stroke="#74452b" stroke-width="4"/>
+<g transform="translate(512 0) scale(-1 1)">
+<path d="M 178 204 C 158 194 146 214 152 238 C 156 254 168 264 180 256 Z" fill="#94603f" stroke="#33190e" stroke-width="5"/>
+<path d="M 170 218 C 161 222 161 238 169 246" fill="none" stroke="#74452b" stroke-width="4"/>
+</g>
+<path d="M 170 196 C 166 118 210 86 256 86 C 302 86 346 118 342 196 C 342 228 338 250 330 266 C 318 290 290 314 268 322 C 260 325 252 325 244 322 C 222 314 194 290 182 266 C 174 250 170 228 170 196 Z" fill="#94603f"/>
+<path d="M 342 196 C 342 228 338 250 330 266 C 318 290 290 314 268 322 C 262 324 258 325 256 325 C 284 312 306 290 316 264 C 324 244 328 220 328 196 Z" fill="#74452b"/>
+<path d="M 170 196 C 166 118 210 86 256 86 C 302 86 346 118 342 196 C 342 228 338 250 330 266 C 318 290 290 314 268 322 C 260 325 252 325 244 322 C 222 314 194 290 182 266 C 174 250 170 228 170 196 Z" fill="none" stroke="#33190e" stroke-width="5"/>
+<path d="M 258 258 L 263 273 L 254 275 Z" fill="#74452b"/>
+<path d="M 257 252 C 255 262 252 268 249 272 L 255 275" fill="none" stroke="#33190e" stroke-width="3"/>
+<path d="M 238 297 C 248 302 264 302 274 297" fill="none" stroke="#33190e" stroke-width="3"/>
+<path d="M 250 308 C 254 310 258 310 262 308" fill="none" stroke="#74452b" stroke-width="3"/>
+</g>
+</svg>

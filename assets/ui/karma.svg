@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><defs><radialGradient id="enamel"><stop stop-color="#284754"/><stop offset="1" stop-color="#101b2f"/></radialGradient></defs><circle cx="14" cy="14" r="13" fill="url(#enamel)" stroke="#d3b777" stroke-width=".7"/><g transform="translate(3 3) scale(.7857)">
+<circle cx="14" cy="14" r="10" fill="#f3efe6" stroke="#2a2118" stroke-width="2"/>
+<path d="M14 4 A10 10 0 0 1 14 24 A5 5 0 0 1 14 14 A5 5 0 0 0 14 4 Z" fill="#2a2118"/>
+<circle cx="14" cy="9" r="1.7" fill="#2a2118"/>
+<circle cx="14" cy="19" r="1.7" fill="#f3efe6"/>
+</g><path d="M7 4Q14 0 21 4" fill="none" stroke="#8de2dc" stroke-width=".7" opacity=".7"/></svg>

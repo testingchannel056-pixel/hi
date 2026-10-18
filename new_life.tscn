@@ -1,0 +1,181 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/new_life.gd" id="1_new_life"]
+[ext_resource type="Script" path="res://ui_pack/portrait.gd" id="2_portrait"]
+
+[node name="NewLife" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_new_life")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.043, 0.067, 0.078, 1)
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Margin/VBox"]
+layout_mode = 2
+theme_type_variation = &"TitleLabel"
+theme_override_font_sizes/font_size = 40
+text = "A New Life"
+horizontal_alignment = 1
+
+[node name="Intro" type="Label" parent="Margin/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+text = "Every legend begins with a face. Shape yours, then step into the jianghu."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Top" type="HBoxContainer" parent="Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Picture" type="VBoxContainer" parent="Margin/VBox/Top"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="Portrait" type="TextureRect" parent="Margin/VBox/Top/Picture"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("2_portrait")
+
+[node name="LooksWord" type="Label" parent="Margin/VBox/Top/Picture"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"TitleLabel"
+theme_override_font_sizes/font_size = 22
+text = "Ordinary"
+horizontal_alignment = 1
+
+[node name="Column" type="VBoxContainer" parent="Margin/VBox/Top"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="NameRow" type="HBoxContainer" parent="Margin/VBox/Top/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NameEdit" type="LineEdit" parent="Margin/VBox/Top/Column/NameRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Your name"
+max_length = 24
+
+[node name="RandomNameButton" type="Button" parent="Margin/VBox/Top/Column/NameRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Random"
+
+[node name="GenderButtons" type="HBoxContainer" parent="Margin/VBox/Top/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Sliders" type="VBoxContainer" parent="Margin/VBox/Top/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="RerollButton" type="Button" parent="Margin/VBox/Top/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Reroll fate"
+
+[node name="Stages" type="HBoxContainer" parent="Margin/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 22
+alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Options" type="VBoxContainer" parent="Margin/VBox/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="BirthTitle" type="Label" parent="Margin/VBox/Scroll/Options"]
+layout_mode = 2
+theme_type_variation = &"TitleLabel"
+theme_override_font_sizes/font_size = 22
+text = "Birth"
+
+[node name="Backgrounds" type="GridContainer" parent="Margin/VBox/Scroll/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="BackgroundHint" type="Label" parent="Margin/VBox/Scroll/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+autowrap_mode = 3
+
+[node name="TalentTitle" type="Label" parent="Margin/VBox/Scroll/Options"]
+layout_mode = 2
+theme_type_variation = &"TitleLabel"
+theme_override_font_sizes/font_size = 22
+text = "Talent"
+
+[node name="Talents" type="HFlowContainer" parent="Margin/VBox/Scroll/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+
+[node name="TalentHint" type="Label" parent="Margin/VBox/Scroll/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+autowrap_mode = 3
+
+[node name="BeginButton" type="Button" parent="Margin/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+theme_type_variation = &"AgeButton"
+text = "Begin this life"
+
+[node name="ResumeButton" type="Button" parent="Margin/VBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Back to your saved life"

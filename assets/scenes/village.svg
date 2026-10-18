@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="384" viewBox="0 0 160 96">
+<defs><clipPath id="frame"><rect x="1" y="1" width="158" height="94" rx="5"/></clipPath></defs>
+<g clip-path="url(#frame)">
+<rect width="160" height="96" fill="#d9dccb"/>
+<path d="M0 46 L34 24 L70 46 Z" fill="#b9c2b0"/>
+<path d="M70 46 L112 18 L160 46 Z" fill="#c4cbbb"/>
+<rect y="62" width="160" height="34" fill="#b79a6c"/>
+<rect y="62" width="160" height="4" fill="#a18458"/>
+<rect x="10" y="38" width="44" height="26" fill="#e6dcc3"/>
+<path d="M4 40 L14 27 L50 27 L60 40 Z" fill="#4b4d57"/>
+<rect x="27" y="48" width="10" height="16" fill="#6b4630"/>
+<rect x="100" y="32" width="50" height="32" fill="#e0d3b6"/>
+<path d="M94 34 L106 20 L144 20 L156 34 Z" fill="#7a3b33"/>
+<rect x="110" y="42" width="10" height="9" fill="#4b3a2a"/>
+<rect x="130" y="42" width="10" height="9" fill="#4b3a2a"/>
+<path d="M56 36 Q78 44 100 34" stroke="#4b3a2a" stroke-width="1" fill="none"/>
+<circle cx="66" cy="41" r="3" fill="#c8402f"/>
+<circle cx="90" cy="39" r="3" fill="#c8402f"/>
+<rect x="64" y="50" width="28" height="12" fill="#8a5a3c"/>
+<path d="M61 50 L95 50 L91 44 L65 44 Z" fill="#c9a14a"/>
+<circle cx="78" cy="71" r="4" fill="#e0b48f"/>
+<path d="M72 87 Q72 75 78 75 Q84 75 84 87 Z" fill="#5d6f8a"/>
+<circle cx="118" cy="74" r="4" fill="#d6a67e"/>
+<path d="M112 90 Q112 78 118 78 Q124 78 124 90 Z" fill="#8a5a3c"/>
+</g>
+<rect x="1" y="1" width="158" height="94" rx="5" fill="none" stroke="#c9a15a" stroke-width="1.2"/>
+</svg>

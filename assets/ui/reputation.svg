@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><defs><radialGradient id="enamel"><stop stop-color="#284754"/><stop offset="1" stop-color="#101b2f"/></radialGradient></defs><circle cx="14" cy="14" r="13" fill="url(#enamel)" stroke="#d3b777" stroke-width=".7"/><g transform="translate(3 3) scale(.7857)">
+<path d="M14 3 L17.2 10.3 L25 11 L19 16.2 L20.8 24 L14 19.8 L7.2 24 L9 16.2 L3 11 L10.8 10.3 Z" fill="#3a9c8f" stroke="#17483f" stroke-width="2" stroke-linejoin="round"/>
+</g><path d="M7 4Q14 0 21 4" fill="none" stroke="#8de2dc" stroke-width=".7" opacity=".7"/></svg>
